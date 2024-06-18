@@ -395,12 +395,6 @@ ORDER BY "Total" DESC,
 | India       | 138   | 19     | 40     | 197   |
 | Jamaica     | 38    | 75     | 44     | 157   |
 | ...         |       |        |        |       |
-| Uzbekistan  | 10    |	7      | 17     | 34    |
-| Georgia     | 8     | 6      | 18     | 32    |
-| Chile       |	3     | 9      | 20     | 32    |
-| Thailand    | 9     | 8      | 13     | 30    |
-| Colombia    | 5     | 9      | 14     | 28    |
-| ...         |       |        |        |       |
 | Bolivia     | 0     |	0      | 0      | 0     |
 | Nauru       | 0     | 0      | 0      | 0     |
 
