@@ -97,7 +97,7 @@ FETCH FIRST 1 ROWS ONLY;
 ### Which nation(s) has participated in every Olympic edition?
 
 ``` SQL []
-WITH CTE AS (
+WITH APPEARENCES_BY_COUNTRY AS (
     SELECT N.REGION AS "Country",
            COUNT(DISTINCT GAMES) AS "Olympic Appearences"
     FROM ATHLETE_EVENTS_SM A
@@ -105,15 +105,15 @@ WITH CTE AS (
     GROUP BY N.REGION
 )
 SELECT "Country" AS "Countries Participating in Each Olympics"
-FROM CTE
+FROM APPEARENCES_BY_COUNTRY
 WHERE "Olympic Appearences" = (SELECT COUNT(DISTINCT GAMES) 
                                FROM ATHLETE_EVENTS_SM);
 ```
 
-### Which sport(s) has been played in every Olympic edition?
+### Which sport(s) has been played in every Summer Olympic edition?
 
 ``` SQL []
-WITH CTE AS (
+WITH SUMMER_SPORTS AS (
     SELECT SPORT AS "Sport",
            COUNT(DISTINCT GAMES) AS "Olympic Appearences"
     FROM ATHLETE_EVENTS_SM
@@ -121,7 +121,7 @@ WITH CTE AS (
     GROUP BY SPORT
 )
 SELECT "Sport" AS "Sports Played in Every Summer Olympics"
-FROM CTE
+FROM SUMMER_SPORTS
 WHERE "Olympic Appearences" = (SELECT COUNT(DISTINCT GAMES)
                                FROM ATHLETE_EVENTS_SM
                                WHERE GAMES LIKE '%Summer%');
@@ -130,14 +130,14 @@ WHERE "Olympic Appearences" = (SELECT COUNT(DISTINCT GAMES)
 ### Which sport(s) has been played only once in the Olympics?
 
 ``` SQL []
-WITH CTE AS (
+WITH OLYMPIC_SPORTS AS (
     SELECT SPORT AS "Sport",
            COUNT(DISTINCT GAMES) AS "Olympic Appearences"
     FROM ATHLETE_EVENTS_SM
     GROUP BY SPORT
 )
 SELECT "Sport" AS "One-Time Olympic Sports"
-FROM CTE
+FROM OLYMPIC_SPORTS
 WHERE "Olympic Appearences" = 1;
 ```
 
@@ -154,14 +154,14 @@ ORDER BY "Olympic Games" ASC;
 ### Who were the oldest athletes to ever win a Gold medal in the Olympics?
 
 ``` SQL []
-WITH CTE AS (
+WITH OLD_AND_GOLD_ATHLETES AS (
     SELECT ID, NAME, SEX, AGE, TEAM, NOC, GAMES, CITY, SPORT, EVENT, MEDAL,
            RANK() OVER(ORDER BY AGE DESC) AS "Ranking"
     FROM ATHLETE_EVENTS_SM
     WHERE MEDAL = 'Gold' AND AGE <> 'NA'
 )
 SELECT ID, NAME, SEX, AGE, TEAM, NOC, GAMES, CITY, SPORT, EVENT, MEDAL
-FROM CTE
+FROM OLD_AND_GOLD_ATHLETES
 WHERE "Ranking" = 1;
 ```
 
