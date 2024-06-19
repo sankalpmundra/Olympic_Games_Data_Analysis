@@ -30,8 +30,6 @@ DESC NOC_REGIONS_SM;
 
 _Note: The `NOTES` column is for teams with more than one name, some old alias, or any other niche characteristics._
 
----
-
 The latter is the main table that contains detailed information about athletes and their participation in the various Olympic Games. This table stores each record of a participation by an athlete, down to the specific sport and event, and what medal they won (if they did). It also documents the personal details of each athlete (e.g. name, age, weight, etc.) and the country they represented. Here, the `NOC` column is a foreign key to the previous lookup table. Finally, the `ID` column is the primary key for this table, which is used to uniquely identify each athlete that ever participated in the Olympic Games.
 
 ``` SQL []
@@ -107,7 +105,7 @@ ORDER BY "Olympic Games" ASC;
 | 2014 Winter   |
 | 2016 Summer   |
 
-[See full result](https://github.com/sankalpmundra/Olympic_Games_Data_Analysis/blob/9e680aece9dced6ce8d43fe1338c78b3f6bc64e5/Query%20Results/02-list-of-all-olympic-games/query_result.csv)
+[See full result](https://github.com/sankalpmundra/Olympic_Games_Data_Analysis/blob/ea7118dc3bb5c63ecf22e4e6a090543b6c4dcd64/Query_Results/02-list-of-all-olympic-games/query_result.csv)
 
 ---
 
@@ -134,7 +132,7 @@ ORDER BY "Olympic Games" ASC;
 | 2014 Winter   | 88                            |
 | 2016 Summer   | 204                           |
 
-[See full result](https://github.com/sankalpmundra/Olympic_Games_Data_Analysis/blob/9e680aece9dced6ce8d43fe1338c78b3f6bc64e5/Query%20Results/03-olympic-participation-by-country/query_result.csv)
+[See full result](https://github.com/sankalpmundra/Olympic_Games_Data_Analysis/blob/ea7118dc3bb5c63ecf22e4e6a090543b6c4dcd64/Query_Results/03-olympic-participation-by-country/query_result.csv)
 
 ---
 
@@ -265,7 +263,7 @@ ORDER BY "Olympic Games" ASC;
 | 2014 Winter   | 15            |
 | 2016 Summer   | 34            |
 
-[See full result](https://github.com/sankalpmundra/Olympic_Games_Data_Analysis/blob/9e680aece9dced6ce8d43fe1338c78b3f6bc64e5/Query%20Results/08-olympic-participation-by-sport/query_result.csv)
+[See full result](https://github.com/sankalpmundra/Olympic_Games_Data_Analysis/blob/ea7118dc3bb5c63ecf22e4e6a090543b6c4dcd64/Query_Results/08-olympic-participation-by-sport/query_result.csv)
 
 ---
 
@@ -334,11 +332,11 @@ WHERE "Ranking" <= 5;
 
 | ID    | Name                               | Gold Medals |
 | :---- | :--------------------------------- | ----------: |
-| 94406 | Michael Fred Phelps, II	         | 23          |
-| 33557 | Raymond Clarence "Ray" Ewry	     | 10          |
-| 67046	| Larysa Semenivna Latynina (Diriy-) | 9           |
-| 69210	| Frederick Carlton "Carl" Lewis	 | 9           |
-| 87390	| Paavo Johannes Nurmi	             | 9           |
+| 94406 | Michael Fred Phelps, II            | 23          |
+| 33557 | Raymond Clarence "Ray" Ewry	   | 10          |
+| 67046 | Larysa Semenivna Latynina (Diriy-) | 9           |
+| 69210 | Frederick Carlton "Carl" Lewis	   | 9           |
+| 87390 | Paavo Johannes Nurmi	          | 9           |
 
 ---
 
@@ -359,10 +357,10 @@ WHERE "Ranking" <= 5;
 
 | ID    | Name                               | Total Medals |
 | :---- | :--------------------------------- | -----------: |
-| 94406 | Michael Fred Phelps, II	         | 28           |
-| 67046	| Larysa Semenivna Latynina (Diriy-) | 18           |
-| 4198	| Nikolay Yefimovich Andrianov       | 15           |
-| 11951	| Ole Einar Bjrndalen                | 13           |
+| 94406 | Michael Fred Phelps, II	          | 28           |
+| 67046 | Larysa Semenivna Latynina (Diriy-) | 18           |
+| 4198	 | Nikolay Yefimovich Andrianov       | 15           |
+| 11951 | Ole Einar Bjrndalen                | 13           |
 | 74420 | Edoardo Mangiarotti                | 13           |
 
 ---
@@ -413,22 +411,22 @@ ORDER BY "Total" DESC,
 
 | Country     | Gold  | Silver | Bronze | Total |
 | :------     | ----: | -----: | -----: | ----: |
-| USA	      | 2638  |	1641   | 1358	| 5637  |
+| USA	       | 2638  | 1641   | 1358   | 5637  |
 | Russia      | 1599  | 1170   | 1178   | 3947  |
-| Germany     |	1301  | 1195   | 1260   | 3756  |
+| Germany     | 1301  | 1195   | 1260   | 3756  |
 | UK          | 678   | 739    | 651    | 2068  |
 | France      | 501   | 610    | 666    | 1777  |
 | ...         |       |        |        |       |
-| Greece      | 62    |	109    | 84     | 255   |
+| Greece      | 62    | 109    | 84     | 255   |
 | New Zealand | 90    | 56     | 82     | 228   |
-| Ukraine     |	47    | 52     | 100    | 199   |
+| Ukraine     | 47    | 52     | 100    | 199   |
 | India       | 138   | 19     | 40     | 197   |
 | Jamaica     | 38    | 75     | 44     | 157   |
 | ...         |       |        |        |       |
-| Bolivia     | 0     |	0      | 0      | 0     |
+| Bolivia     | 0     | 0      | 0      | 0     |
 | Nauru       | 0     | 0      | 0      | 0     |
 
-[See full result](https://github.com/sankalpmundra/Olympic_Games_Data_Analysis/blob/9e680aece9dced6ce8d43fe1338c78b3f6bc64e5/Query%20Results/14-medals-tally-for-countries/query_result.csv)
+[See full result](https://github.com/sankalpmundra/Olympic_Games_Data_Analysis/blob/ea7118dc3bb5c63ecf22e4e6a090543b6c4dcd64/Query_Results/14-medals-tally-for-countries/query_result.csv)
 
 ---
 
@@ -453,9 +451,9 @@ ORDER BY "Olympic Games" ASC,
 
 | Olympic Games | Country  | Gold  | Silver | Bronze | Total |
 | :------------ | :------- | ----: | -----: | -----: | ----: |
-| 1896 Summer	| Greece   | 10	   | 18	    | 20     | 48    |
-| 1896 Summer	| Germany  | 25	   | 5	    | 2	     | 32    |
-| 1896 Summer	| USA      | 11    | 7      | 2      | 20    |
+| 1896 Summer	  | Greece   | 10	| 18	  | 20     | 48    |
+| 1896 Summer	  | Germany  | 25	| 5	  | 2	    | 32    |
+| 1896 Summer	  | USA      | 11    | 7      | 2      | 20    |
 | ...           |          |       |        |        |       |
 | 1900 Summer   | France   | 52    | 101    | 82     | 235   |
 | 1900 Summer   | UK       | 59    | 34     | 15     | 108   |
@@ -466,7 +464,7 @@ ORDER BY "Olympic Games" ASC,
 | 1904 Summer   | Germany  | 4     | 5      | 7      | 16    |
 | ...           |          |       |        |        |       |
 
-[See full result](https://github.com/sankalpmundra/Olympic_Games_Data_Analysis/blob/9e680aece9dced6ce8d43fe1338c78b3f6bc64e5/Query%20Results/15-medals-tally-for-countries-by-olympic-edition/query_result.csv)
+[See full result](https://github.com/sankalpmundra/Olympic_Games_Data_Analysis/blob/ea7118dc3bb5c63ecf22e4e6a090543b6c4dcd64/Query_Results/15-medals-tally-for-countries-by-olympic-edition/query_result.csv)
 
 ---
 
@@ -518,16 +516,16 @@ WHERE "Overall Ranking" = 1;
 | Olympic Games | Most Successful Country | Gold  | Silver | Bronze | Total |
 | :------------ | :---------------------- | ----: | -----: | -----: | ----: |
 | 1896 Summer   | Greece                  | 10    | 18     | 20     | 48    |
-| 1900 Summer	| France	              | 52	  | 101	   | 82	    | 235   |
-| 1904 Summer	| USA	                  | 128	  | 141	   | 125	| 394   |
-| 1906 Summer	| Greece	              | 24	  | 48	   | 30	    | 102   |
-| 1908 Summer	| UK	                  | 147	  | 131	   | 90	    | 368   |
+| 1900 Summer	  | France	              | 52	 | 101	   | 82     | 235   |
+| 1904 Summer	  | USA	              | 128	 | 141	   | 125    | 394   |
+| 1906 Summer	  | Greece	              | 24	 | 48	   | 30     | 102   |
+| 1908 Summer	  | UK	                     | 147	 | 131	   | 90     | 368   |
 | ...           |                         |       |        |        |       |
-| 2012 Summer	| USA	                  | 145	  | 57	   | 46	    | 248   |
-| 2014 Winter	| Canada	              | 59	  | 22	   | 5	    | 86    |
-| 2016 Summer	| USA	                  | 139	  | 54	   | 71	    | 264   |
+| 2012 Summer	  | USA	              | 145	 | 57	   | 46     | 248   |
+| 2014 Winter	  | Canada	              | 59    | 22	   | 5	     | 86    |
+| 2016 Summer	  | USA	              | 139	 | 54	   | 71     | 264   |
 
-[See full result](https://github.com/sankalpmundra/Olympic_Games_Data_Analysis/blob/9e680aece9dced6ce8d43fe1338c78b3f6bc64e5/Query%20Results/16-top-performing-countries-by-olympic-edition/query_result.csv)
+[See full result](https://github.com/sankalpmundra/Olympic_Games_Data_Analysis/blob/ea7118dc3bb5c63ecf22e4e6a090543b6c4dcd64/Query_Results/16-top-performing-countries-by-olympic-edition/query_result.csv)
 
 ---
 
@@ -558,17 +556,17 @@ ORDER BY "Total" DESC,
 
 | Country     | Gold  | Silver | Bronze | Total |
 | :------     | ----: | -----: | -----: | ----: |
-| Ghana	      | 0     |	1      | 22  	| 23    |
+| Ghana       | 0     | 1      | 22     | 23    |
 | Paraguay    | 0     | 17     | 0      | 17    |
-| Iceland     |	0     | 15     | 2      | 17    |
+| Iceland     | 0     | 15     | 2      | 17    |
 | Malaysia    | 0     | 11     | 5      | 16    |
 | Montenegro  | 0     | 14     | 0      | 14    |
 | ...         |       |        |        |       |
-| Barbados    |	0     | 0      | 1      | 1     |
+| Barbados    | 0     | 0      | 1      | 1     |
 | Djibouti    | 0     | 0      | 1      | 1     |
 | Macedonia   | 0     | 0      | 1      | 1     |
 
-[See full result](https://github.com/sankalpmundra/Olympic_Games_Data_Analysis/blob/9e680aece9dced6ce8d43fe1338c78b3f6bc64e5/Query%20Results/17-countries-winning-only-silver-or-bronze/query_result.csv)
+[See full result](https://github.com/sankalpmundra/Olympic_Games_Data_Analysis/blob/ea7118dc3bb5c63ecf22e4e6a090543b6c4dcd64/Query_Results/17-countries-winning-only-silver-or-bronze/query_result.csv)
 
 ---
 
@@ -646,7 +644,7 @@ ORDER BY "Olympic Games" ASC;
 | 2014 Winter   | 0             | 0            | 0               |
 | 2016 Summer   | 0             | 2            | 0               |
 
-[See full result](https://github.com/sankalpmundra/Olympic_Games_Data_Analysis/blob/9e680aece9dced6ce8d43fe1338c78b3f6bc64e5/Query%20Results/19-india-share-of-hockey-vs-total-medals/query_result.csv)
+[See full result](https://github.com/sankalpmundra/Olympic_Games_Data_Analysis/blob/ea7118dc3bb5c63ecf22e4e6a090543b6c4dcd64/Query_Results/19-india-share-of-hockey-vs-total-medals/query_result.csv)
 
 ---
 
@@ -680,7 +678,7 @@ ORDER BY "Olympic Games" ASC;
 | 2012 Summer   | 4654            |
 | 2016 Summer   | 5034            |
 
-[See full result](https://github.com/sankalpmundra/Olympic_Games_Data_Analysis/blob/9e680aece9dced6ce8d43fe1338c78b3f6bc64e5/Query%20Results/20-female-participation-by-olympic-edition/query_result.csv)
+[See full result](https://github.com/sankalpmundra/Olympic_Games_Data_Analysis/blob/ea7118dc3bb5c63ecf22e4e6a090543b6c4dcd64/Query_Results/20-female-participation-by-olympic-edition/query_result.csv)
 
 ![Distribution](https://github.com/sankalpmundra/Olympic_Games_Data_Analysis/blob/9e680aece9dced6ce8d43fe1338c78b3f6bc64e5/Query%20Results/20-female-participation-by-olympic-edition/female_olympics_participation_GRAPH.png?raw=true)
 
