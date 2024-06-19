@@ -25,8 +25,8 @@ DESC NOC_REGIONS_SM;
 | Column Name | Data Type    | Nullable | Description                      |
 | :---------- | :----------- | :------- | :------------------------------- |
 | NOC         | CHAR(3)      | No       | National Olympic Committee code  |
-| REGION      | VARCHAR(50)  | No       | Country name                     |
-| NOTES       | VARCHAR(128) | No       | Additional notes for the country |
+| REGION      | VARCHAR(50)  | Yes      | Country name                     |
+| NOTES       | VARCHAR(128) | Yes      | Additional notes for the country |
 
 > **Note:** The `NOTES` column is for teams with more than one name, some old alias, or any other niche characteristics.
 
