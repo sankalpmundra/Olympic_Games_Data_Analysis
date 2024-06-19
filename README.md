@@ -647,7 +647,11 @@ ORDER BY "Olympic Games" ASC;
 
 ---
 
-### BONUS: Has female participation in the Summer Olympics grown over time?
+## BONUS: Female Participation in the Summer Olympics
+
+### Overview
+
+This analysis explores the growth of female participation in the Summer Olympic Games from 1900 to 2016. Using data from the main `ATHLETE_EVENTS_SM` table, I have counted the number of unique female athletes that have participated in each edition of the Summer Olympics.
 
 ``` SQL []
 SELECT GAMES AS "Olympic Games", 
@@ -679,6 +683,27 @@ ORDER BY "Olympic Games" ASC;
 
 [CLICK HERE TO SEE FULL RESULT](https://github.com/sankalpmundra/Olympic_Games_Data_Analysis/blob/ea7118dc3bb5c63ecf22e4e6a090543b6c4dcd64/Query_Results/20-female-participation-by-olympic-edition/query_result.csv)
 
+### Visualization
+
+The following bar chart was created using _Microsoft Excel_ after exporting the SQL result set as a _CSV_ file, and it helps visualizing the significant milestones in women's participation in the Olympics.
+
 ![FEMALE PARTICIPATION IN THE OLYMPICS DISTRIBUTION PREVIEW](https://github.com/sankalpmundra/Olympic_Games_Data_Analysis/blob/9e680aece9dced6ce8d43fe1338c78b3f6bc64e5/Query%20Results/20-female-participation-by-olympic-edition/female_olympics_participation_GRAPH.png?raw=true)
 
+
+### Key Findings
+
+- **Steady Growth**: The number of female athletes has shown a steady increase over the years, reflecting a broader trend towards gender inclusivity in sports at the international level.
+- **Historical Context**: 
+  - In the early 20th century, female participation was minimal, starting out with just 23 athletes in the 1900 Summer Olympics and even a slight decline in the 1904 and 1906 editions.
+  - However, a significant increase began around the mid-20th century, with the number of female athletes surpassing 400 for the first time in the 1948 Summer Olympics.
+- **Modern Era**:
+  - The latter part of the 20th century saw exponential growth in the number of female participants in the Summer Olympics. By the 2008 Summer Olympics, the number of had reached 4,609.
+  - This upward trend continued, resulting in 5,034 female athletes participating in the 2016 Summer Olympics.
+
+### Conclusion
+
+The data clearly demonstrates a positive trend in female participation in the Summer Olympics. This growth highlights the progress made in gender equality in sports and the increasing opportunities for female athletes on the global stage. All in all, we are moving in the right direction!
+
 ---
+
+> Hope you enjoyed reading this report! If you liked this, feel free to check out my other repositories and make sure you follow my [GitHub](https://github.com/sankalpmundra)!
