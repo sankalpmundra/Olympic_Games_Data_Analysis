@@ -647,7 +647,7 @@ ORDER BY "Olympic Games" ASC;
 
 ---
 
-### Has female participation in the Summer Olympics grown over time?
+### BONUS: Has female participation in the Summer Olympics grown over time?
 
 ``` SQL []
 SELECT GAMES AS "Olympic Games", 
