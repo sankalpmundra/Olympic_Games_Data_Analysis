@@ -62,7 +62,7 @@ DESC ATHLETE_EVENTS_SM;
 
 ---
 
-## Queries HELLO
+## Queries
 
 Here, I am presenting a series of SQL queries used to analyze the Olympic Games dataset. These queries answer a wide range of questions about the history and details of the Olympic Games.
 Topics covered include the number of Olympic Games held, the countries and athletes who participated, medal counts, and specific achievements by nations and athletes. Each query is accompanied by a snippet of the result set to provide a glimpse of the findings, offering interesting insights into the Olympics.
